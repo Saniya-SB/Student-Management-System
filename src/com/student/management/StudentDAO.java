@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class StudentDAO {
 
-    public  void addStudent(Student student){
+    public  boolean addStudent(Student student){
         String sql = "INSERT INTO student(id,name,age,email,course,address) VALUES(?,?,?,?,?,?)";
 
        try (        Connection con = DBConnection.getConnection();
@@ -18,14 +18,14 @@ public class StudentDAO {
            ps.setString(4,student.getEmail());
            ps.setString(5, student.getCourse());
            ps.setString(6, student.getAddress());
-           ps.executeUpdate();
+         int rowAffected=  ps.executeUpdate();
 
-           System.out.println("Record Insertion successful");
+         return rowAffected>0;
 
        }
        catch(SQLException e){
-           System.out.println("Inserting Record Unsuccessful");
            e.printStackTrace();
+           return false;
 
        }
 
