@@ -104,7 +104,7 @@ public class StudentDAO {
     }
 
 
-
+   // To update student
     public  boolean updateStudent(Student student) {
         String sql = "UPDATE student SET name=?, age=?, email=?, course=?, address=? WHERE id=?";
 
@@ -127,7 +127,7 @@ public class StudentDAO {
 
         }
     }
-
+               // To Delete Student
     public  boolean deleteStudent(int id ) {
         String sql = "DELETE FROM student WHERE id=? ";
 
