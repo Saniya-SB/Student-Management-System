@@ -1,14 +1,11 @@
 package com.student.management;
 
 import javax.xml.transform.Result;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class StudentDAO {
-                     // Add student
+                     // Add a student
     public  boolean addStudent(Student student){
         String sql = "INSERT INTO student(id,name,age,email,course,address) VALUES(?,?,?,?,?,?)";
 
@@ -67,8 +64,7 @@ public class StudentDAO {
         return null;
     }
 
-    //display or view student
-
+    // view all student
     public ArrayList<Student> viewAllStudent(){
         ArrayList<Student> students=new ArrayList<>();
         String sql="SELECT * FROM student";
@@ -103,8 +99,7 @@ public class StudentDAO {
 
     }
 
-
-   // To update student
+    //Update all student
     public  boolean updateStudent(Student student) {
         String sql = "UPDATE student SET name=?, age=?, email=?, course=?, address=? WHERE id=?";
 
@@ -127,7 +122,8 @@ public class StudentDAO {
 
         }
     }
-               // To Delete Student
+
+    //Delete a student by id
     public  boolean deleteStudent(int id ) {
         String sql = "DELETE FROM student WHERE id=? ";
 

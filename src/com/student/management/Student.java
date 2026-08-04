@@ -1,6 +1,10 @@
+/**
+ * Represents a student entity with personal and academic details.
+ */
 package com.student.management;
 
-public class Student {
+public class
+Student {
     private int id;
     private String name;
     private int age;
@@ -9,7 +13,9 @@ public class Student {
     private String address;
 
 
+    // Default constructor
     public Student(){ }
+    // Parametrized constructor
     public Student(int id, String name, int age, String email, String course, String address){
 
         this.id = id;
@@ -19,6 +25,7 @@ public class Student {
         this.course = course;
         this.address = address;
     }
+    // Getter AND Setter
     public int getId(){
         return id;
     }
@@ -67,6 +74,8 @@ public class Student {
         this.address = address;
     }
 
+
+    // Display student details
     @Override
     public String toString() {
         return "Student{" +

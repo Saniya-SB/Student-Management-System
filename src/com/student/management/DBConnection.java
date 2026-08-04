@@ -1,3 +1,8 @@
+
+/**
+ * Provides a connection to the MySQL database.
+ */
+
 package com.student.management;
 
 import java.sql.*;
@@ -9,7 +14,10 @@ public class DBConnection {
 
         public static Connection getConnection(){
         try{
+            //// Establishes a connection with the MySQL database.
                 Connection con= DriverManager.getConnection(url,user,psw);
+
+                //// Returns a database connection.
             return con;
 
 

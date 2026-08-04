@@ -1,3 +1,8 @@
+/**
+ * Entry point of the Student Management System.
+ * Displays the menu and handles user interaction.
+ */
+
 package com.student.management;
 import java.util.*;
 import java.sql.Connection;
@@ -33,7 +38,7 @@ public class Main {
                     System.out.println("Enter Student id:");
                     int id = sc.nextInt();
 
-                    //to remove leftover space after sc.nextInt and before sc.nextLine of string
+                // Consume leftover newline after nextInt()
                     sc.nextLine();
 
                     System.out.println("Enter Student name");
@@ -65,7 +70,7 @@ public class Main {
                     }
                     break;
             }
-                //Search Student by Id
+                //Search Student
                 case 2: {
                     System.out.println("Enter Student id");
                     int id = sc.nextInt();
@@ -181,6 +186,7 @@ public class Main {
                             break;
                     }
 
+                    //Exit Application
                 case 6:
                     System.out.println("Thank you for using Student Management System.\n" +
                             "Exiting...");
