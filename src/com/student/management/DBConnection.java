@@ -10,9 +10,6 @@ public class DBConnection {
         public static Connection getConnection(){
         try{
                 Connection con= DriverManager.getConnection(url,user,psw);
-
-
-            System.out.println("Database Connected successfully");
             return con;
 
 
